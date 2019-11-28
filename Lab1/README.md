@@ -26,10 +26,10 @@
 **cache_line_size=64:** Μέγεθος μνήμης cache  
 **mem_mode=timing:** Η κύρια μνήμη είναι σε λειτουργία timing  
 **mem_ranges=0:2147483647:** Φυσικές διευθύνσεις μνήμης  
-**[system.cpu_cluster.cplus]**  
+***[system.cpu_cluster.cplus]***  
 **type=MinorCPU:** Τύπος επεξεργαστή  
 **children=branchPred dcache dtb dtb_walker_cache executeFuncUnits icache interrupts isa itb_walker_cache tracer workload:** Υπο-κλάσεις της κλάσης cpu (περιλαμβάνει τις cache)  
-**[dcache.tags]**  
+***[dcache.tags]***  
 **entry_size=64:** μέγεθος κάθε λέξης που αποθηκευεται  
 **size=32768** μέγεθος dcache σε bit   
 ***[icache.tags]***  
