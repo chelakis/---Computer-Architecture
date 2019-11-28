@@ -27,6 +27,7 @@
 **cache_line_size=64:** Μέγεθος λέξεων στην μνήμης cache (bit)  
 **mem_mode=timing:** Η κύρια μνήμη είναι σε λειτουργία timing  
 **mem_ranges=0:2147483647:** Φυσικές διευθύνσεις μνήμης  
+**clock=1000** Ο αριθμός του ρολογιού του επεξεργαστή. Το 1000 σημαίνει ότι στην πραγματικότητα η συχνότητα είναι 1000000000000 / 1000 = 1GHz  
 ***[system.cpu_cluster.cplus]***  
 **type=MinorCPU:** Τύπος επεξεργαστή  
 **children=branchPred dcache dtb dtb_walker_cache executeFuncUnits icache interrupts isa itb_walker_cache tracer workload:** Υπο-κλάσεις της κλάσης cpu (περιλαμβάνει τις cache)  
