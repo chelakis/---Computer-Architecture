@@ -51,30 +51,36 @@
 ## 3a. Εκτέλεση προγράμματος στον gem5
 ### Εκτέλεση αρχείου se.py με MinorCPU
 **Εντολή:** *./build/ARM/gem5.opt -d hw_se_minor configs/example/se.py --cpu-type=MinorCPU --caches -c  tests/test-progs/hello/bin/arm/linux/hello*
+
 **Αποτέλεσμα:** Hello world! Exiting @ tick 25502000
 
 ### Εκτέλεση αρχείου se.py με AtomicCPU
 **Εντολή:** *./build/ARM/gem5.opt -d hw_se_atomic configs/example/se.py --cpu-type=AtomicSimpleCPU --caches -c  tests/test-progs/hello/bin/arm/linux/hello*
+
 **Αποτέλεσμα:** Hello world! Exiting @ tick 2915000
 *Παρατηρώ ότι ο atomic είναι πιο αργός από τον minor*
 
 ### Εκτέλεση αρχείου se.py με TimingSimpleCPU
 **Εντολή:** *./build/ARM/gem5.opt -d hw_se_timingsimple configs/example/se.py --cpu-type=TimingSimpleCPU --caches -c  tests/test-progs/hello/bin/arm/linux/hello*
+
 **Αποτέλεσμα:** Hello world!Exiting @ tick 28667000
 *Παρατηρώ ότι ο timing simple είναι πιο γρήγορος από τον atomic και πιο αργός από τον minor. Το αποτέλεσμα είναι αναμενόμενο καθώς ο minor χρησιμοποιεί 4-stage pipeline. Έτσι τα δεδομένα μπορούν να "φορτωθούν" πιο γρήγορα στον επεξεργαστή*
 
 ### Εκτέλεση αρχείου se.py με MinorCPU και συχνότητα 5GHz
 **Εντολή:** *./build/ARM/gem5.opt -d hw_se_minor_5ghz configs/example/se.py --cpu-type=MinorCPU --cpu-clock=5GHz  --caches -c  tests/test-progs/hello/bin/arm/linux/hello*
+
 **Αποτέλεσμα:** Hello world! Exiting @ tick 22607800
 *Πιο γρήγορος από τον default minorCPU αφού χρειάστηκε λιγότερο χρόνο ολοκλήρωσης*
 
 ### Εκτέλεση αρχείου se.py με MinorCPU και συχνότητα 400Hz
 **Εντολή:** *./build/ARM/gem5.opt -d hw_se_minor_400 configs/example/se.py --cpu-type=MinorCPU --cpu-clock=400  --caches -c  tests/test-progs/hello/bin/arm/linux/hello*
+
 **Αποτέλεσμα:** Hello world! Exiting @ tick 26727500000000
 *Πολύ πιο αργός από τον default minorCPU αφού χρειάστηκε πολύ περισσότερο χρόνο ολοκλήρωσης*
 
 ### Εκτέλεση αρχείου se.py με MinorCPU και μνήμη DDR4
 *./build/ARM/gem5.opt -d hw_se_minor_ddr4 configs/example/se.py --cpu-type=MinorCPU --mem-type=DDR4_2400_8x8  --caches -c  tests/test-progs/hello/bin/arm/linux/hello*
+
 **Αποτέλεσμα:** Hello world! Exiting @ tick 24855000 
 *Ελάχιστα πιο γρήγορη ολοκλήρωση με την μνήμη DDR4. Υποθέτω ότι επειδή είναι πιο γρήγορη τεχνολογία είναι και πιο γρήγορη.*
 
