@@ -12,13 +12,13 @@
 Η κύρια μνήμη οριοθετείται στον φυσικό χώρο.
 Τέλος καλούνται οι κατάλληλες συναρτήσεις για την εκτέλεση του προγράμματος.
 
-Κάποιες από τις τροποποιήσημες μεταβλητές στο αρχείο se.py είναι:
-*-cpu:* υποδεικνύει τον τύπο του kernel που χρησιμοποιείται μεταξύ atomic, minor, hpi.
-*-cpu-freq:* υποδεικνύει την συχνότητα ρολογιού του επεξεργαστή.
-*-num-cores:* υποδεικνύει τον αριθμό των πυρήνων του επεξεργαστή CPU.
-*-mem-type:* υποδεικνύει τον τύπο της RAM του συστήματος.
-*-mem-rank:* υποδεικνύει την ιεραρχία της μνήμης.
-*-mem-size:* υποδεικνύει το συνολικό μέγεθος της μνήμης RAM.
+Κάποιες από τις τροποποιήσημες μεταβλητές στο αρχείο se.py είναι:  
+*-cpu:* υποδεικνύει τον τύπο του kernel που χρησιμοποιείται μεταξύ atomic, minor, hpi.  
+*-cpu-freq:* υποδεικνύει την συχνότητα ρολογιού του επεξεργαστή.  
+*-num-cores:* υποδεικνύει τον αριθμό των πυρήνων του επεξεργαστή CPU.  
+*-mem-type:* υποδεικνύει τον τύπο της RAM του συστήματος.  
+*-mem-rank:* υποδεικνύει την ιεραρχία της μνήμης.  
+*-mem-size:* υποδεικνύει το συνολικό μέγεθος της μνήμης RAM.  
 
 ## 2. Αρχεία config.ini και config.json;
 Στο αρχείο config.ini (περιλαμβάνεται στο repository) μπορούμε να δούμε τις αποθηκευμένες τιμές και χαρακτηριστικά συστήματος που δημιούργησε ο gem5 στην προσομοίωση.
@@ -57,37 +57,38 @@
 ### Εκτέλεση αρχείου se.py με AtomicCPU
 **Εντολή:** *./build/ARM/gem5.opt -d hw_se_atomic configs/example/se.py --cpu-type=AtomicSimpleCPU --caches -c  tests/test-progs/hello/bin/arm/linux/hello*
 
-**Αποτέλεσμα:** Hello world! Exiting @ tick 2915000
+**Αποτέλεσμα:** Hello world! Exiting @ tick 2915000  
 *Παρατηρώ ότι ο atomic είναι πιο αργός από τον minor*
 
 ### Εκτέλεση αρχείου se.py με TimingSimpleCPU
 **Εντολή:** *./build/ARM/gem5.opt -d hw_se_timingsimple configs/example/se.py --cpu-type=TimingSimpleCPU --caches -c  tests/test-progs/hello/bin/arm/linux/hello*
 
-**Αποτέλεσμα:** Hello world!Exiting @ tick 28667000
+**Αποτέλεσμα:** Hello world!Exiting @ tick 28667000  
 *Παρατηρώ ότι ο timing simple είναι πιο γρήγορος από τον atomic και πιο αργός από τον minor. Το αποτέλεσμα είναι αναμενόμενο καθώς ο minor χρησιμοποιεί 4-stage pipeline. Έτσι τα δεδομένα μπορούν να "φορτωθούν" πιο γρήγορα στον επεξεργαστή*
 
 ### Εκτέλεση αρχείου se.py με MinorCPU και συχνότητα 5GHz
 **Εντολή:** *./build/ARM/gem5.opt -d hw_se_minor_5ghz configs/example/se.py --cpu-type=MinorCPU --cpu-clock=5GHz  --caches -c  tests/test-progs/hello/bin/arm/linux/hello*
 
-**Αποτέλεσμα:** Hello world! Exiting @ tick 22607800
+**Αποτέλεσμα:** Hello world! Exiting @ tick 22607800  
 *Πιο γρήγορος από τον default minorCPU αφού χρειάστηκε λιγότερο χρόνο ολοκλήρωσης*
 
 ### Εκτέλεση αρχείου se.py με MinorCPU και συχνότητα 400Hz
 **Εντολή:** *./build/ARM/gem5.opt -d hw_se_minor_400 configs/example/se.py --cpu-type=MinorCPU --cpu-clock=400  --caches -c  tests/test-progs/hello/bin/arm/linux/hello*
 
-**Αποτέλεσμα:** Hello world! Exiting @ tick 26727500000000
+**Αποτέλεσμα:** Hello world! Exiting @ tick 26727500000000  
 *Πολύ πιο αργός από τον default minorCPU αφού χρειάστηκε πολύ περισσότερο χρόνο ολοκλήρωσης*
 
 ### Εκτέλεση αρχείου se.py με MinorCPU και μνήμη DDR4
 *./build/ARM/gem5.opt -d hw_se_minor_ddr4 configs/example/se.py --cpu-type=MinorCPU --mem-type=DDR4_2400_8x8  --caches -c  tests/test-progs/hello/bin/arm/linux/hello*
 
-**Αποτέλεσμα:** Hello world! Exiting @ tick 24855000 
+**Αποτέλεσμα:** Hello world! Exiting @ tick 24855000  
 *Ελάχιστα πιο γρήγορη ολοκλήρωση με την μνήμη DDR4. Υποθέτω ότι επειδή είναι πιο γρήγορη τεχνολογία είναι και πιο γρήγορη.*
 
 ### Εκτέλεση αρχείου se.py με MinorCPU και μνήμη DDR3
 *./build/ARM/gem5.opt -d hw_se_minor_ddr3 configs/example/se.py --cpu-type=MinorCPU --mem-type=DDR3_1600_8x8  --caches -c  tests/test-progs/hello/bin/arm/linux/hello*
 
-**Αποτέλεσμα:** Hello world! Exiting @ tick 25502000 
+**Αποτέλεσμα:** Hello world! Exiting @ tick 25502000  
 *Ίδιος χρόνος ολοκλήρωσης με το default. Λογικά η default μνήμη RAM είναι τύπου DDR3.*
 
-# **Τα αρχεία stats βρίσκονται στους αντίστοιχους φακέλους στον φακελο run_files**
+# **Τα αρχεία stats βρίσκονται στους αντίστοιχους φακέλους στον φακελο run_files**  
+# **Ότι έτρεξα στο terminal του linux καθώς και ότι μου επέστρεψε βρίσκεται στο αρχείο bashcode**
