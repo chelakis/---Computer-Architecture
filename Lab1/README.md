@@ -24,7 +24,7 @@
 ## 2. Αρχεία config.ini και config.json;
 Στο αρχείο config.ini (περιλαμβάνεται στο repository) μπορούμε να δούμε τις αποθηκευμένες τιμές και χαρακτηριστικά συστήματος που δημιούργησε ο gem5 στην προσομοίωση.
 Ξεκινόντας από τις πρώτες γραμμές βλέπουμε ορισμένα χαρακτηριστικά όπως:  
-**cache_line_size=64:** Μέγεθος λέξεων στην μνήμης cache (bit)  
+**cache_line_size=64:** Μέγεθος λέξεων στην μνήμης cache (byte)  
 **mem_mode=timing:** Η κύρια μνήμη είναι σε λειτουργία timing  
 **mem_ranges=0:2147483647:** Φυσικές διευθύνσεις μνήμης  
 **clock=1000** Ο αριθμός του ρολογιού του επεξεργαστή. Το 1000 σημαίνει ότι στην πραγματικότητα η συχνότητα είναι 1000000000000 / 1000 = 1GHz  
@@ -33,10 +33,10 @@
 **children=branchPred dcache dtb dtb_walker_cache executeFuncUnits icache interrupts isa itb_walker_cache tracer workload:** Υπο-κλάσεις της κλάσης cpu (περιλαμβάνει τις cache)  
 ***[dcache.tags]***  
 **entry_size=64:** μέγεθος κάθε λέξης που αποθηκευεται  
-**size=32768** μέγεθος dcache σε bit   
+**size=32768** μέγεθος dcache σε byte  
 ***[icache.tags]***  
 **entry_size=64:** μέγεθος κάθε λέξης που αποθηκευεται  
-**size=49152** μέγεθος dcache σε bit   
+**size=49152** μέγεθος dcache σε byte   
 
 ## 3. Πληροφορίες για άλλα μοντέλα CPU;
 
