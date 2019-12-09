@@ -281,7 +281,11 @@ Eπιρρεάζουμε το μεγέθη της L2 cache. Πρώτα θα με�
 
 Αυτό σημαίνει ότι οι συναρτήσεις που θα βγάλουμε θα είναι εκθετικής μορφής. Αν πάρουμε μεμονομένα κάθε στοιχείο του επεξεργαστή (L1 dcache, L1 icache, L2 cache)
 
-![Image 5: Final equation](/Lab2/Charts/final_equation.png)   
+![Image 6: L1 equation](/Lab2/Charts/L1_equation.png)   
+
+![Image 7: cost](/Lab2/Charts/cost.png)   
+
+![Image 8: Final equation](/Lab2/Charts/final_equation.png)   
 
 | L1 dcache size | L1 dcache assoc.  | L1 icache size  | L1 icache assoc. | L2 size | L2 assoc. | cache line | price |
 |---             |---                |---              |---               |---      |---        |---         |---    |
