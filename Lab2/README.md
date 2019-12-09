@@ -281,5 +281,5 @@ Eπιρρεάζουμε το μεγέθη της L2 cache. Πρώτα θα με�
 
 Αυτό σημαίνει ότι οι συναρτήσεις που θα βγάλουμε θα είναι εκθετικής μορφής. Αν πάρουμε μεμονομένα κάθε στοιχείο του επεξεργαστή (L1 dcache, L1 icache, L2 cache)
 
-e^(0.008*(dcache_size+icache_size)+0.15*(dcache_assoc+icache_assoc))+e^(0.0006(l2_size)+0.06(l2_assoc)))*e^(0.03*(cacheline_size))
+$${cost} = {e^{(0.008*(L1dcache_{size}+L1icache_{size})+0.15*(L1dcache_{assoc}+L1icache_{assoc}))}+e^{(0.0006(L2_{size})+0.06(L2_{assoc})))}*e^{(0.03*(Cache Line_{size}))}.$$
 
