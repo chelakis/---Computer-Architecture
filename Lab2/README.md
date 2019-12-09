@@ -316,8 +316,8 @@ Eπιρρεάζουμε το μεγέθη της L2 cache. Πρώτα θα με�
 
 #### Benchmark: bzip
 
-
+![Image 9: bzip results](/Lab2/Charts/bzip_cost.png)   
 
 #### Benchmark: libm
 
-
+![Image 10: libm results](/Lab2/Charts/libsm_cost.png)   
