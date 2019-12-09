@@ -281,7 +281,19 @@ Eπιρρεάζουμε το μεγέθη της L2 cache. Πρώτα θα με�
 
 Αυτό σημαίνει ότι οι συναρτήσεις που θα βγάλουμε θα είναι εκθετικής μορφής. Αν πάρουμε μεμονομένα κάθε στοιχείο του επεξεργαστή (L1 dcache, L1 icache, L2 cache)
 
-\\({cost} = {e^{(0.008*(L1dcache_{size}+L1icache_{size})+0.15*(L1dcache_{assoc}+L1icache_{assoc}))}+e^{(0.0006(L2_{size})+0.06(L2_{assoc})))}*e^{(0.03*(Cache Line_{size}))}\\)
+![Image 5: Final equation](/Lab2/Charts/final_equation.png)   
 
-<script type="text/javascript" async
-src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+| L1 dcache size | L1 dcache assoc.  | L1 icache size  | L1 icache assoc. | L2 size | L2 assoc. | cache line | price |
+|---             |---                |---              |---               |---      |---        |---         |---    |
+|16KB         |2                  |16KB              |2              |128KB      |4        |32B         |9.73€     |
+|32KB         |2                  |32KB              |2              |128KB      |4        |32B         |11.52€    |
+|32KB         |2                  |32KB              |2              |512KB      |4        |32B         |12.45€    |
+|32KB         |4                  |32KB              |4              |512KB      |4        |32B         |18.98€    |
+|32KB         |4                  |32KB              |4              |512KB      |8        |32B         |20.20€    |
+|32KB         |4                  |32KB              |4              |2048KB     |8        |32B         |28.90€    |
+|64KB         |4                  |64KB              |4              |2048KB     |8        |32B         |38.50€    |
+|32KB         |4                  |32KB              |4              |512KB      |8        |64B         |52.77€    |
+|32KB         |4                  |32KB              |4              |2048KB     |8        |64B         |70.45€    |
+|64KB         |4                  |64KB              |4              |2048KB     |8        |64B         |100.72€   |
+|32KB         |4                  |32KB              |4              |2048KB     |8        |128B        |514€      |
+
