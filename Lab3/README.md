@@ -55,18 +55,20 @@
 
 ## Xeon vs ARM Cortex A9
 
+
+
 |Type: | Xeon |	ARM Cortex-A9 |
 |---  |---  |---  |
 |Technology |	65nm |	40nm |
 |Clock Frequency	| 3.4 GHz |	2 GHz |
 |Area	| 410.507 mm^2	 |5.39698 mm^2 |
 |Peak Power	|134.938 W |	1.74189 W |
-|Total Leakage	| 36.832 W	0.10868 W |
+|Total Leakage	| 36.832 W	| 0.10868 W |
 |Peak Dynamic	| 98.106 W	| 1.6332 W |
 |Subthreshold Leakage |	35.163 W |	0.0523094 W |
 |Subthreshold Leakage with power gating	 | 16.3977 W	 | - |
 |Gate Leakage	| 1.66871 W |	0.0563774 W |
 |Runtime Dynamic |	72.9199 W	 | 2.96053 W |
-Total Simulation Time	t	40*t
+
 
 
