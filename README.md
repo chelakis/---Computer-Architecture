@@ -1,2 +1,2 @@
-# ArxitektonikiYpologiston
+# Computer Architecture - Αρχιτεκτονική Υπολογιστών
 Παραδοτέα αρχεία για το μάθημα της Αρχιτεκτονικής Υπολογιστών
